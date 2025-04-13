@@ -13,13 +13,13 @@
         const a2 = s.charCodeAt(2);
         const a3 = s.charCodeAt(4);
         const a4 = s.charCodeAt(5);
-        console.log(a1, a2, a3, a4); // 97 12354 128522 128523
+        console.log(a1, a2, a3, a4);
 
         //.codePointAt()で文字コードを取得
         const b1 = s.codePointAt(0);
         const b2 = s.codePointAt(2);
         const b3 = s.codePointAt(4);
-        console.log(b1, b2, b3); // 97 12354 128522
+        console.log(b1, b2, b3);
 
         // String.fromCharCode()で文字を取得
         console.log(
@@ -40,9 +40,8 @@
         );
 
         // 文字の分割
-        console.log(s.split('')); // ["a", "b", "あ", "い", "😃", "😄
-        console.log([...s]); // ["a", "b", "あ", "い", "😃", "😄
-        // "]
+        console.log(s.split(''));
+        console.log([...s]); 
     </script>
 </head>
 
