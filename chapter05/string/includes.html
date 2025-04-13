@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const s = '当店のチョコレートパフェは、'
+            + 'チョコをふんだんに使っています。';
+
+        //.includes()の結果をコンソール出力
+        console.log('--- includes() ---');
+        console.log(s.includes('チョコ')); // true
+        console.log(s.includes('バナナ'));
+
+        //.startsWith()の結果をコンソール出力
+        console.log('--- startsWith() ---');
+        console.log(s.startsWith('当店'));
+        console.log(s.startsWith('お店'));
+
+        //.endsWith()の結果をコンソール出力
+        console.log('--- endsWith() ---');
+        console.log(s.endsWith('。'));
+        console.log(s.endsWith('！'));
+
+        //.indexOf()の結果をコンソール出力
+        console.log('--- indexOf() ---');
+        console.log(s.indexOf('チョコ'));
+        console.log(s.indexOf('バナナ'));
+
+        //.lastIndexOf()の結果をコンソール出力
+        console.log('--- lastIndexOf() ---');
+        console.log(s.lastIndexOf('チョコ'));
+        console.log(s.lastIndexOf('バナナ'));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

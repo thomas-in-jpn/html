@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Dateオブジェクトを生成
+        const date = new Date(2030, 0, 1, 0, 0, 0);
+
+        //年月日時分秒を得て、コンソール出力
+        console.log(
+            date.getFullYear(),
+            date.getMonth() + 1,
+            date.getDate(),
+            date.getHours(),
+            date.getMinutes(),
+            date.getSeconds()
+        );
+
+        // 年月日時分秒を1ずつ加算
+        date.setFullYear(date.getFullYear() + 1);
+        date.setMonth(date.getMonth() + 1);
+        date.setDate(date.getDate() + 1);
+        date.setHours(date.getHours() + 1);
+        date.setMinutes(date.getMinutes() + 1);
+        date.setSeconds(date.getSeconds() + 1);
+
+        // コンソール出力
+        console.log(
+            date.getFullYear(),
+            date.getMonth() + 1,
+            date.getDate(),
+            date.getHours(),
+            date.getMinutes(),
+            date.getSeconds()
+        );
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
