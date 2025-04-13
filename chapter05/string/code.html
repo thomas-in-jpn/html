@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const s = 'abあい😃😄';
+
+        //.charCodeAt()で文字コードを取得
+        const a1 = s.charCodeAt(0);
+        const a2 = s.charCodeAt(2);
+        const a3 = s.charCodeAt(4);
+        const a4 = s.charCodeAt(5);
+        console.log(a1, a2, a3, a4);
+
+        //.codePointAt()で文字コードを取得
+        const b1 = s.codePointAt(0);
+        const b2 = s.codePointAt(2);
+        const b3 = s.codePointAt(4);
+        console.log(b1, b2, b3);
+
+        // String.fromCharCode()で文字を取得
+        console.log(
+            String.fromCharCode(a1),
+            String.fromCharCode(a2),
+            String.fromCharCode(a3),
+            String.fromCharCode(a4),
+            String.fromCharCode(a3, a4),
+            String.fromCharCode(a1, a2, a3, a4),
+        );
+
+        //String.fromCodePoint()で文字を取得
+        console.log(
+            String.fromCodePoint(b1),
+            String.fromCodePoint(b2),
+            String.fromCodePoint(b3),
+            String.fromCodePoint(b1, b2, b3),
+        );
+
+        // 文字の分割
+        console.log(s.split(''));
+        console.log([...s]); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

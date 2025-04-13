@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // ISO8601形式でコンソール出力
+        const d1 = new Date('1999-01-01T00:00:00+09:00');
+        console.log(d1.toISOString()); // 1998-12-31T15:00:00.000Z
+
+        // ISO8601形式でUTCに変換
+        const d2 = new Date('1999-01-01T00:00:00Z');
+        console.log(d2.toISOString()); // 1999-01-01T00:00:00.000Z
+
+        // ISO8601形式で現地時間に変換
+        const d3 = new Date(1999, 0, 1, 0, 0, 0);
+        console.log(d3.toISOString()); // Fri Jan 01 00:00:00 GMT+0900 (Japan Standard Time)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

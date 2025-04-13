@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const start = Date.now();
+
+        // forループで5000回回して処理
+        for (let i = 0; i < 5000; i++) {
+            // @を5000個連結
+            let str1 = '@'.repeat(5000);
+            // 配列へ変換
+            let arr = [...str1];
+        }
+
+        //終了時間のmsを取得
+        const end = Date.now();
+
+        //差分を求めて、コンソール出力
+        const diff = end - start;
+        console.log(`開始${start}、終了${end}。経過時間は${diff}ミリ秒`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

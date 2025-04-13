@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const re = /([\*_]{2,})(.+?)(\1)/g;
+
+        const s = 'マークダウンでは、 **強調** を***アスタリスク***か___アンダースコア___を2つあるいは3つでおこなえます。無駄に*****たくさん*****書いてみました。';
+
+        //関数を使って*の長さによって強調の方法を変える
+        const rep = s.replace(re, (s, s1, s2, s3) => {
+            //変数初期化
+            let len = s1.length;
+            let tag = [];
+            // s1の長さによってHTMLタグを変える
+            if (len === 2) {
+                tag = ['<strong>', '</strong>'];
+            }
+            if (len >= 3) {
+                tag = ['<em><strong>', '</strong></em>'];
+            }
+
+            //タグで挟んだ文字列を返す
+            return tag[0] + s2 + tag[1];
+        });
+
+        // コンソール出力
+        console.log(rep); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

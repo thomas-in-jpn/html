@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const re = /^(.+?)( = )(.+?)$/g;
+
+        // 正規表現にマッチしたら順序を入れ替える
+        // $1: a, $2: =, $3: b
+        // $1と$3の順序を入れ替える
+        // $2はそのまま
+        const s = 'a * b = b * a';
+        console.log(s.replace(re, '$3$2$1'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
