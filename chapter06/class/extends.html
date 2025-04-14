@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Menu {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+            getInf() {
+                return `${this.name} : ${this.price}円`;
+            }
+        }
+        class DrinkMenu extends Menu {
+            constructor(name, price, size) {
+                super(name, price);
+                this.size = null;
+                if (size === 'S' || size === 'M' || size === 'L') {
+                    this.size = size;
+                } else {
+                    console.error('サイズはS、M、Lのいずれかを指定してください。');
+                }
+            }
+            getInf() {
+                const superT = super.getInf();
+                return `${superT} : サイズ(${this.size})`;
+            }
+            getSizeNum() {
+                if (this.size === 'S') {
+                    return 200;
+                } else if (this.size === 'M') {
+                    return 500;
+                } else if (this.size === 'L') {
+                    return 800;
+                } else {
+                    return 0;
+                }
+            }
+        }
+
+        const cake1 = new Menu('チョコケーキ', 510);
+        const iceTea = new DrinkMenu('アイスティー', 400, 'S');
+        const iceCoffee = new DrinkMenu('アイスコーヒー', 450, 'M');
+
+
+        // メソッドをコンソール出力
+        console.log(cake1.getInf());
+        console.log(iceTea.getInf());
+        console.log(`量は、${iceTea.getSizeNum()}mlです。`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

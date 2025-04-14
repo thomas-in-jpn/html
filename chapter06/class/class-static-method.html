@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Menu {
+            /**
+             *
+             */
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+            static caclTax(price, taxPercent) {
+                return Math.floor(price * (100 + taxPercent) / 100);
+            }
+            getInf() {
+                return `${this.name} : ${this.price}円`;
+            }
+
+        }
+
+        const cake1 = new Menu('チョコケーキ', 510);
+        const cake2 = new Menu('チーズケーキ', 460);
+
+        // staticメソッドで消費税計算
+        console.log(Menu.caclTax(cake1.price, 10));
+        console.log(Menu.caclTax(cake2.price, 10));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
