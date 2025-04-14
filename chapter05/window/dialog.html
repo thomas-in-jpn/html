@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const order = prompt('注文をどうぞ。', 'コーヒー');
+        if (order === null) {
+            alert('またのお越しをお待ちしております。');
+        } else {
+            const takeout = confirm(`${order}ですね。店内でお召し上がりになりますか？`);
+            if (takeout) {
+                alert('お席までお持ちしますので、番号札をお持ちください。');
+            } else {
+                alert('お持ち帰りですね。');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

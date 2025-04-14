@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 5000px;
+            height: 10000px;
+        }
+
+        #inf {
+            position: fixed;
+            top: 0;
+            background: #fcc;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <pre id="inf"></pre>
+    <script>
+        const intervalId = setInterval(() => {
+            // 右500px、下1000pxスクロール/秒
+            scrollBy(50, 100);
+            viewInf();
+        }, 100);
+
+        //　一定時間後、繰り返しを停止
+        setTimeout(() => {
+            scrollTo(0, 0);
+            viewInf();
+            clearInterval(intervalId);
+            console.log('停止');
+        }, 5000);
+
+        // #infに情報表示
+        function viewInf() {
+            const t = `
+scrollX : ${scrollX}
+scrollY : ${scrollY}
+innterWidth : ${innerWidth}
+innerHeight : ${innerHeight}
+            `;
+
+            const infId = document.querySelector('#inf');
+            infId.innerText = t.trim();
+        }
+    </script>
+</body>
+
+</html>
