@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="exec" onclick="exec()">移動</button>
+    <div id="output">index.html</div>
+    <script>
+        // 戻るボタンのときの処理
+        window.addEventListener('popstate', e => {
+            view(e.state);
+        });
+
+        //カウンター用変数
+        let count = 0;
+
+        //移動ボタンを押した際、ページを移動
+        function exec() {
+            // 文字列を作成しｔstateを作る
+            const pg = `${count}.html`;
+            const state = { text: `count is ${count}.` };
+            //移動先のページを表示
+            view(state);
+
+            //.pushStateで見かけ上のURLを変更
+            history.pushState(state, '', pg);
+            //カウンターをインクリメント
+            count++;
+        }
+
+        //#outputに表示
+        function view(state) {
+            let t = 'index.html';
+            if (state !== null) {
+                t = state.text;
+            }
+            const output = document.querySelector('#output');
+            output.innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>
